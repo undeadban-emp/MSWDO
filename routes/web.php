@@ -23,6 +23,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin', 'namespace' => 'Admi
     Route::get('/index', 'AdminController@index')->name('index');
     Route::get('/create-cbms', 'CreateController@index')->name('index');
     Route::get('/list-cbms', 'ListController@index')->name('index');
+    Route::get('/create-details', 'CreateController@createDetails')->name('create.show');
 });
 
 Route::group(['prefix' => 'manager', 'middleware' => 'manager', 'namespace' => 'Manager'], function (){

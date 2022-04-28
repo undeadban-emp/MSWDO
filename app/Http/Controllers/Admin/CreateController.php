@@ -17,6 +17,11 @@ class CreateController extends Controller
         return view('admin.create-cbms');
     }
 
+    public function createDetails()
+    {
+        return view('admin.create-details');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
