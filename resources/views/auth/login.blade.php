@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="{{ asset('assets/css/pages/auth.css') }}">
 </head>
 
-<body>
-    <div id="auth">
+<body >
+    <div style="background: url('{{ asset('assets/images/Surigao_del_Sur_Provincial_Capitol.jpg') }}') center;" id="auth">
         <div class="row h-100">
-            <div class="col-lg-6 col-12 d-none d-lg-block">
-                <div id="auth-right">
-                </div>
+            <div style="background: url('{{ asset('assets/images/logo.png') }}') no-repeat scroll right center"  class="col-lg-5 col-12 d-none d-lg-block ">
+                {{-- <div id="auth-right">
+                </div> --}}
             </div>
-            <div class="col-lg-6 ">
+            <div class="col-lg-7">
                 <div id="auth-left">
                     <h1 class="auth-title text-center pb-5">Log in</h1>
                     <form method="POST" action="{{ route('login') }}">
