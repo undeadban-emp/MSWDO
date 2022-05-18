@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\SocialInformation;
 use Illuminate\Http\Request;
 
 class CreateController extends Controller
@@ -17,9 +18,9 @@ class CreateController extends Controller
         return view('admin.create-cbms');
     }
 
-    public function createDetails()
+    public function createDetails($id)
     {
-        return view('admin.create-details');
+        return view('admin.create-details',compact('id'));
     }
 
     /**
@@ -40,7 +41,24 @@ class CreateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
+        // if($request->ajax()) {
+
+            
+
+
+            // SocialInformation::where(['payroll_no' => $payroll_no, 'employee_id' => $employeeID])->update([
+            //     'monthly_salary'       => $monthlySalary,
+            //     'add_compensation'     => $totalCompensation,
+            //     'gross_salary'         => $grossSalary,
+            //     'mandatory_deductions' => $totalMandatory,
+            //     'personal_deductions'  => $personalDeductions,
+            //     'total_deductions'     => $totalDeductions,
+            //     'net_amount'           => $netSalary,
+            // ]);
+
+            // return response()->json(['success' => true]);
+        // }
     }
 
     /**

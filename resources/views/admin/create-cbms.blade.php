@@ -100,7 +100,7 @@
 
                     <div class="col-12 col-md-12 col-lg-12 pt-1">
                         <h6>House Hold No:</h6>
-                        <input type="text" required class="form-control" id="HouseHoldNo" placeholder="">
+                        <input type="text" required class="form-control" id="house_hold_no" placeholder="">
                     </div>
 
                     <div class="col-12 col-md-4 col-lg-4 pt-1">
@@ -342,7 +342,6 @@
                             <h6>Practicing Pre-Natal Check-up:</h6>
                             <div class="form-group">
                                 <select id="practicing_pre_natal_check_up" class="choices form-select">
-                                    <option value="">Please Select</option>
                                     <option value="No">No</option>
                                     <option value="Yes">Yes</option>
                                 </select>
@@ -352,7 +351,7 @@
                         <div class="col-12 col-md-3 col-lg-3 pt-2">
                             <h6>Pregnant Mother:</h6>
                             <div style="padding-top:19px;" class="form-group">
-                                <select id="pregnant_mother" class="choices form-select">
+                                <select id="pregnant_mother" class="choices form-select" disabled>
                                     <option value="">Please Select</option>
                                     <option value="No">No</option>
                                     <option value="Yes">Yes</option>
@@ -363,7 +362,7 @@
                         <div class="col-12 col-md-3 col-lg-3 pt-2">
                             <h6>Couple practicing Family Planning:</h6>
                             <div class="form-group">
-                                <select id="couple_practicing_family_planning" class="choices form-select">
+                                <select id="couple_practicing_family_planning" class="choices form-select" disabled>
                                     <option value="">Please Select</option>
                                     <option value="No">No</option>
                                     <option value="Yes">Yes</option>
@@ -374,7 +373,7 @@
                         <div class="col-12 col-md-3 col-lg-3 pt-2">
                             <h6>Breastfeeding 6 months child:</h6>
                             <div class="form-group">
-                                <select id="breastfeeding_6_months_child" class="choices form-select">
+                                <select id="breastfeeding_6_months_child" class="choices form-select" disabled>
                                     <option value="">Please Select</option>
                                     <option value="ExclusiveBreastfeeding">Exclusive Breastfeeding</option>
                                     <option value="MixedMilkFeeding">Mixed Milk Feeding</option>
@@ -395,7 +394,6 @@
                             <h6>PWD:</h6>
                             <div class="form-group">
                                 <select id="person_with_disability" class="choices form-select">
-                                    <option value="">Please Select</option>
                                     <option value="No">No</option>
                                     <option value="Yes">Yes</option>
                                 </select>
@@ -405,7 +403,7 @@
                         <div class="col-12 col-md-2 col-lg-2">
                             <h6>Type of Disability:</h6>
                             <div class="form-group">
-                                <select id="type_of_disability" class="choices form-select">
+                                <select id="type_of_disability" class="choices form-select" disabled>
                                     <option value="">Please Select</option>
                                     <option value="Psychosocial">Psychosocial</option>
                                     <option value="Visual">Visual</option>
@@ -421,7 +419,7 @@
                         <div class="col-12 col-md-4 col-lg-4">
                             <h6>Cause of Disability:</h6>
                             <div class="form-group">
-                                <select id="cause_of_disability" class="choices form-select">
+                                <select id="cause_of_disability" class="choices form-select" disabled>
                                     <option value="">Please Select</option>
                                     <option value="CongenitalInborn">Congenital / Inborn</option>
                                     <option value="Illness">Illness</option>
@@ -432,7 +430,7 @@
 
                         <div class="col-12 col-md-4 col-lg-4">
                             <h6>BASPO ID No.:</h6>
-                            <input type="text" class="form-control" id="baspo_id_no" placeholder="">
+                            <input type="text" class="form-control" id="baspo_id_no" placeholder="" disabled>
                         </div>
                     </div>
 
@@ -463,14 +461,14 @@
                             <h6>Pensioner:</h6>
                             <div class="form-group">
                                 <select name="pensioner_senior" id="pensioner_senior" class="form-control" class="" disabled>
-                                    <option value="*">Please Select</option>
+                                    <option value="">Please Select</option>
                                     <option value="No">No</option>
                                     <option value="Yes">Yes</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                <button class="btn btn-primary nextBtn pull-right house_hold_head_next" type="button">Next</button>
             </div>
         </div>
 
@@ -486,19 +484,19 @@
             <div class="panel-body">
                 <div class="form-group">
                     <div class="lista">
-                    <div class="row">
-                            <div class="col-2 pb-2">
+                    <div class="row list_row">
+                            <div class="col-2 pb-2 class_members_of_the_family">
                             </div>
                             <div class="col-6 pb-2">
-                                <input id="name_1" maxlength="200" type="text" class="form-control" placeholder="Name of 1st" required/>
+                                <input id="name_1" maxlength="200" type="text" class="form-control" placeholder="Name of 1" required/>
                             </div>
                             <div class="col-4 pb-2">
-                                <button id="winbox" class="btn btn-primary pull-right" type="button">Add Details</button>
+                                <button id="details_1" name="1" class="btn btn-primary pull-right details" type="button">Add Details</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                <button class="btn btn-primary nextBtn pull-right members_of_the_family_next" type="button">Next</button>
             </div>
         </div>
 
@@ -616,13 +614,12 @@
                                 </div>
                             </div>
                         </div>
-                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                <button class="btn btn-primary nextBtn pull-right home_management_next" type="button">Submit</button>
             </div>
         </div>
     </form>
         </div>
         </div>
-
 
 
 
@@ -665,33 +662,37 @@
 <script src="{{ asset('assets/vendors/sweetalert2/sweetalert2.all.min.js') }}"></script>
 <script>
 
-
+$.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
 
     $(document).ready(function () {
         var count = 2;
         $("#addNewMember").click(function(){
-            $(".row").append(`
-            <div class="col-2 pb-2">
+            $(".list_row").append(`
+            <div class="col-2 pb-2 class_members_of_the_family">
                             </div>
                             <div class="col-6 pb-2">
-                                <input id="name_`+count+`" maxlength="200" type="text" class="form-control" placeholder="Name of 1st" required/>
+                                <input id="name_`+count+`" maxlength="200" type="text" class="form-control" placeholder="Name of `+count+`" required/>
                             </div>
                             <div class="col-4 pb-2">
-                                <button id="details_`+count+`" class="btn btn-primary pull-right" type="button">Add Details</button>
+                                <button id="details_`+count+`" name="`+count+`" class="btn btn-primary pull-right details" type="button">Add Details</button>
                             </div>
                         </div>`);
                         count++;
         });
-
-        $("#winbox").click(function(){
+        $(document).on('click', '.details', function () {
+            let id = $(this).attr('name');
             new WinBox({
-            title: "Add Details",
+            title: "Add Details " + id,
             x: "center",
             y: "center",
             width: "75%",
             height: "95%",
-            url: `{{ url('/admin/create-details') }}`,
+            url: `{{ url('/admin/create-details/`+ id +`') }}`,
             onclose: function(force){
                 return !confirm("Close window?");
             }
@@ -709,6 +710,63 @@
                     $("#4_ps_id_no").prop('required', false);
                     $("#4_ps_id_no").prop('disabled', true);
                     $("#4_ps_id_no").removeClass("is-invalid");
+                    $("#4_ps_id_no").val("");
+                }
+        });
+
+        $( "#practicing_pre_natal_check_up" ).change(function() {
+                value = $('#practicing_pre_natal_check_up').val();
+                if(value == "Yes"){
+                    $("#pregnant_mother").prop('required', true);
+                    $("#pregnant_mother").prop('disabled', false);
+                    $("#pregnant_mother").removeClass("is-invalid");
+                    $("#couple_practicing_family_planning").prop('required', true);
+                    $("#couple_practicing_family_planning").prop('disabled', false);
+                    $("#couple_practicing_family_planning").removeClass("is-invalid");
+                    $("#breastfeeding_6_months_child").prop('required', true);
+                    $("#breastfeeding_6_months_child").prop('disabled', false);
+                    $("#breastfeeding_6_months_child").removeClass("is-invalid");
+                }else{
+                    $("#pregnant_mother").prop('required', false);
+                    $("#pregnant_mother").prop('disabled', true);
+                    $("#pregnant_mother").removeClass("is-invalid");
+                    $("#pregnant_mother").val("");
+                    $("#couple_practicing_family_planning").prop('required', false);
+                    $("#couple_practicing_family_planning").prop('disabled', true);
+                    $("#couple_practicing_family_planning").removeClass("is-invalid");
+                    $("#couple_practicing_family_planning").val("");
+                    $("#breastfeeding_6_months_child").prop('required', false);
+                    $("#breastfeeding_6_months_child").prop('disabled', true);
+                    $("#breastfeeding_6_months_child").removeClass("is-invalid");
+                    $("#breastfeeding_6_months_child").val("");
+                }
+        });
+
+        $( "#person_with_disability" ).change(function() {
+                value = $('#person_with_disability').val();
+                if(value == "Yes"){
+                    $("#type_of_disability").prop('required', true);
+                    $("#type_of_disability").prop('disabled', false);
+                    $("#type_of_disability").removeClass("is-invalid");
+                    $("#cause_of_disability").prop('required', true);
+                    $("#cause_of_disability").prop('disabled', false);
+                    $("#cause_of_disability").removeClass("is-invalid");
+                    $("#baspo_id_no").prop('required', true);
+                    $("#baspo_id_no").prop('disabled', false);
+                    $("#baspo_id_no").removeClass("is-invalid");
+                }else{
+                    $("#type_of_disability").prop('required', false);
+                    $("#type_of_disability").prop('disabled', true);
+                    $("#type_of_disability").removeClass("is-invalid");
+                    $("#type_of_disability").val("");
+                    $("#cause_of_disability").prop('required', false);
+                    $("#cause_of_disability").prop('disabled', true);
+                    $("#cause_of_disability").removeClass("is-invalid");
+                    $("#cause_of_disability").val("");
+                    $("#baspo_id_no").prop('required', false);
+                    $("#baspo_id_no").prop('disabled', true);
+                    $("#baspo_id_no").removeClass("is-invalid");
+                    $("#baspo_id_no").val("");
                 }
         });
 
@@ -724,6 +782,8 @@
                     $("#osca_id_no").prop('disabled', true);
                     $("#pensioner_senior").prop('disabled', true);
                     $("#osca_id_no").removeClass("is-invalid");
+                    $("#osca_id_no").val("");
+                    $("#pensioner_senior").val("");
                 }
         });
 
@@ -775,6 +835,174 @@ allNextBtn.click(function () {
 
 $('div.setup-panel div a.btn-success').trigger('click');
 });
+</script>
+<script>
+    $(document).ready(function () {
+            
+            
+            
+            
+            
+
+
+            //console.log(house_hold_no);
+            //console.log(house_hold_firstname);
+            //console.log(house_hold_middlename);
+            //console.log(house_hold_lastname);
+            //console.log(mothers_maiden_firstname);
+            //console.log(mothers_maiden_middlename);
+            //console.log(mothers_maiden_lastname);
+            //console.log(barangay);
+            //console.log(purok);
+            //console.log(date_of_birth);
+            //console.log(place_of_birth);
+            //console.log(sex);
+            //console.log(civil_status);
+            //console.log(citizenship);
+            //console.log(pensioner);
+            //console.log(occupation);
+            //console.log(type_of_employment);
+            //console.log(type_of_employeer);
+            //console.log(employment_id);
+            //console.log(gsis_sss_no);
+            //console.log(pagibig_no);
+            //console.log(philhealth_id_no);
+            //console.log(religion);
+            //console.log(health_condition);
+            //console.log(educational_attainments);
+            //console.log(a4ps);
+            //console.log(a4_ps_id_no);
+            //console.log(practicing_pre_natal_check_up);
+            //console.log(pregnant_mother);
+            //console.log(couple_practicing_family_planning);
+            //console.log(breastfeeding_6_months_child);
+            //console.log(person_with_disability);
+            //console.log(type_of_disability);
+            //console.log(cause_of_disability);
+            //console.log(baspo_id_no);
+            //console.log(senior_citizen_membership);
+            //console.log(osca_id_no);
+            //console.log(pensioner_senior);
+            //console.log(name_1);
+            //console.log(toilet_type);
+            //console.log(water_source);
+            //console.log(food_production_activities);
+            //console.log(using_idiodized_salt);
+            //console.log(with_functional_mrf);
+            //console.log(living_arrangements);
+            //console.log(fenced_household);
+            //console.log(with_blind_drainage);
+            //console.log(segrated_waste);
+
+
+        
+        $('.house_hold_head_next').click(function () {
+            let house_hold_no = $(`#house_hold_no`).val();
+            let house_hold_firstname = $(`#house_hold_firstname`).val();
+            let house_hold_middlename = $(`#house_hold_middlename`).val();
+            let house_hold_lastname = $(`#house_hold_lastname`).val();
+            let mothers_maiden_firstname = $(`#mothers_maiden_firstname`).val();
+            let mothers_maiden_middlename = $(`#mothers_maiden_middlename`).val();
+            let mothers_maiden_lastname = $(`#mothers_maiden_lastname`).val();
+            let barangay = $(`#barangay`).val();
+            let purok = $(`#purok`).val();
+            let date_of_birth = $(`#date_of_birth`).val();
+            let place_of_birth = $(`#place_of_birth`).val();
+            let sex = $(`#sex`).val();
+            let civil_status = $(`#civil_status`).val();
+            let citizenship = $(`#citizenship`).val();
+            let pensioner = $(`#pensioner`).val();
+            let occupation = $(`#occupation`).val();
+            let type_of_employment = $(`#type_of_employment`).val();
+            let type_of_employeer = $(`#type_of_employeer`).val();
+            let employment_id = $(`#employment_id`).val();
+            let gsis_sss_no = $(`#gsis_sss_no`).val();
+            let pagibig_no = $(`#pagibig_no`).val();
+            let philhealth_id_no = $(`#philhealth_id_no`).val();
+            let religion = $(`#religion`).val();
+            let health_condition = $(`#health_condition`).val();
+            let educational_attainments = $(`#educational_attainments`).val();
+
+            let a4ps = $(`#4ps`).val();
+            let a4_ps_id_no = $(`#4_ps_id_no`).val();
+            
+            let practicing_pre_natal_check_up = $(`#practicing_pre_natal_check_up`).val();
+            let pregnant_mother = $(`#pregnant_mother`).val();
+            let couple_practicing_family_planning = $(`#couple_practicing_family_planning`).val();
+            let breastfeeding_6_months_child = $(`#breastfeeding_6_months_child`).val();
+            
+            let person_with_disability = $(`#person_with_disability`).val();
+            let type_of_disability = $(`#type_of_disability`).val();
+            let cause_of_disability = $(`#cause_of_disability`).val();
+            let baspo_id_no = $(`#baspo_id_no`).val();
+            
+            let senior_citizen_membership = $(`#senior_citizen_membership`).val();
+            let osca_id_no = $(`#osca_id_no`).val();
+            let pensioner_senior = $(`#pensioner_senior`).val();
+            
+            let house_hold_head_data = house_hold_no + "|" + house_hold_firstname + "|" + house_hold_middlename + "|" + house_hold_lastname + "|" + mothers_maiden_firstname + "|" + mothers_maiden_middlename + "|" + mothers_maiden_lastname + "|" + barangay + "|" + purok + "|" + date_of_birth + "|" + place_of_birth + "|" + sex + "|" + civil_status + "|" + citizenship + "|" + pensioner + "|" + occupation + "|" + type_of_employment + "|" + type_of_employeer + "|" + employment_id + "|" + gsis_sss_no + "|" + pagibig_no + "|" + philhealth_id_no + "|" + religion + "|" + health_condition + "|" + educational_attainments + "|" + a4ps + "|" + a4_ps_id_no + "|" + practicing_pre_natal_check_up + "|" + pregnant_mother + "|" + couple_practicing_family_planning + "|" + breastfeeding_6_months_child + "|" + person_with_disability + "|" + type_of_disability + "|" + cause_of_disability + "|" + baspo_id_no + "|" + senior_citizen_membership + "|" + osca_id_no + "|" + pensioner_senior + "|";
+            localStorage.setItem("house_hold_head_data", house_hold_head_data);
+        });
+
+        $('.members_of_the_family_next').click(function () {
+            let length = $('.class_members_of_the_family').length;
+            localStorage.removeItem('members_of_the_family_name');
+            for(let ii= 1; ii <= length; ii++){
+                let ls = localStorage.getItem('members_of_the_family_name');
+                let name_1 = $(`#name_` + ii).val();
+                if(ls == null){
+                    localStorage.setItem("members_of_the_family_name", name_1 + "|");
+                }else{
+                    localStorage.setItem("members_of_the_family_name", ls + name_1 + "|");
+                }
+            }
+            localStorage.setItem("members_of_the_family_number", length);
+        });
+
+        $('.home_management_next').click(function () {
+            let toilet_type = $(`#toilet_type`).val();
+            let water_source = $(`#water_source`).val();
+            let food_production_activities = $(`#food_production_activities`).val();
+            let using_idiodized_salt = $(`#using_idiodized_salt`).val();
+            let with_functional_mrf = $(`#with_functional_mrf`).val();
+            let living_arrangements = $(`#living_arrangements`).val();
+            let fenced_household = $(`#fenced_household`).val();
+            let with_blind_drainage = $(`#with_blind_drainage`).val();
+            let segrated_waste = $(`#segrated_waste`).val();
+
+            let lshome_management_data = toilet_type + "|" + water_source + "|" + food_production_activities + "|" + using_idiodized_salt + "|" + with_functional_mrf + "|" + living_arrangements + "|" + fenced_household + "|" + with_blind_drainage + "|" + segrated_waste + "|";
+
+            let lshouse_hold_head_data = localStorage.getItem('house_hold_head_data');
+            let lsmembers_of_the_family_name = localStorage.getItem('members_of_the_family_name');
+            let lsmembers_of_the_family_number = localStorage.getItem('members_of_the_family_number');
+
+            $.ajax({
+                url: `/admin/create-save-cbms`,
+                method: 'POST',
+                data: {
+                    lshouse_hold_head_data,
+                    lsmembers_of_the_family_name,
+                    lshome_management_data,
+                },
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+            for(let i= 1; i <= lsmembers_of_the_family_number; i++){
+                let lsmembers_of_the_family_data = localStorage.getItem('members_of_the_family_data' + i);
+                //$.ajax({
+                //    url: `/admin/create-save-cbms`,
+                //    method: 'POST',
+                //    data: {
+                //        lsmembers_of_the_family_data,
+                //    },
+                //    success: function (response) {
+                //    }
+                //});
+            }
+        });
+    });
+
 </script>
 @endpush
 @endsection

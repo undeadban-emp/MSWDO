@@ -22,8 +22,9 @@ Auth::routes();
 Route::group(['prefix' => 'admin', 'middleware' => 'admin', 'namespace' => 'Admin'], function (){
     Route::get('/index', 'AdminController@index')->name('index');
     Route::get('/create-cbms', 'CreateController@index')->name('index');
+    Route::post('/create-save-cbms', 'CreateController@store')->name('create.index');
     Route::get('/list-cbms', 'ListController@index')->name('index');
-    Route::get('/create-details', 'CreateController@createDetails')->name('create.show');
+    Route::get('/create-details/{id}', 'CreateController@createDetails')->name('create.show');
 });
 
 Route::group(['prefix' => 'manager', 'middleware' => 'manager', 'namespace' => 'Manager'], function (){
