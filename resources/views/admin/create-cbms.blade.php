@@ -89,6 +89,7 @@
     </div>
 
     <form class="mt-4" role="form">
+        @CSRF
         <div class="panel panel-primary setup-content" id="step-1">
             <div class="panel-heading  mb-4">
                 <h4 class="card-title">Basic Information</h4>
@@ -838,64 +839,6 @@ $('div.setup-panel div a.btn-success').trigger('click');
 </script>
 <script>
     $(document).ready(function () {
-            
-            
-            
-            
-            
-
-
-            //console.log(house_hold_no);
-            //console.log(house_hold_firstname);
-            //console.log(house_hold_middlename);
-            //console.log(house_hold_lastname);
-            //console.log(mothers_maiden_firstname);
-            //console.log(mothers_maiden_middlename);
-            //console.log(mothers_maiden_lastname);
-            //console.log(barangay);
-            //console.log(purok);
-            //console.log(date_of_birth);
-            //console.log(place_of_birth);
-            //console.log(sex);
-            //console.log(civil_status);
-            //console.log(citizenship);
-            //console.log(pensioner);
-            //console.log(occupation);
-            //console.log(type_of_employment);
-            //console.log(type_of_employeer);
-            //console.log(employment_id);
-            //console.log(gsis_sss_no);
-            //console.log(pagibig_no);
-            //console.log(philhealth_id_no);
-            //console.log(religion);
-            //console.log(health_condition);
-            //console.log(educational_attainments);
-            //console.log(a4ps);
-            //console.log(a4_ps_id_no);
-            //console.log(practicing_pre_natal_check_up);
-            //console.log(pregnant_mother);
-            //console.log(couple_practicing_family_planning);
-            //console.log(breastfeeding_6_months_child);
-            //console.log(person_with_disability);
-            //console.log(type_of_disability);
-            //console.log(cause_of_disability);
-            //console.log(baspo_id_no);
-            //console.log(senior_citizen_membership);
-            //console.log(osca_id_no);
-            //console.log(pensioner_senior);
-            //console.log(name_1);
-            //console.log(toilet_type);
-            //console.log(water_source);
-            //console.log(food_production_activities);
-            //console.log(using_idiodized_salt);
-            //console.log(with_functional_mrf);
-            //console.log(living_arrangements);
-            //console.log(fenced_household);
-            //console.log(with_blind_drainage);
-            //console.log(segrated_waste);
-
-
-        
         $('.house_hold_head_next').click(function () {
             let house_hold_no = $(`#house_hold_no`).val();
             let house_hold_firstname = $(`#house_hold_firstname`).val();
@@ -940,7 +883,7 @@ $('div.setup-panel div a.btn-success').trigger('click');
             let osca_id_no = $(`#osca_id_no`).val();
             let pensioner_senior = $(`#pensioner_senior`).val();
             
-            let house_hold_head_data = house_hold_no + "|" + house_hold_firstname + "|" + house_hold_middlename + "|" + house_hold_lastname + "|" + mothers_maiden_firstname + "|" + mothers_maiden_middlename + "|" + mothers_maiden_lastname + "|" + barangay + "|" + purok + "|" + date_of_birth + "|" + place_of_birth + "|" + sex + "|" + civil_status + "|" + citizenship + "|" + pensioner + "|" + occupation + "|" + type_of_employment + "|" + type_of_employeer + "|" + employment_id + "|" + gsis_sss_no + "|" + pagibig_no + "|" + philhealth_id_no + "|" + religion + "|" + health_condition + "|" + educational_attainments + "|" + a4ps + "|" + a4_ps_id_no + "|" + practicing_pre_natal_check_up + "|" + pregnant_mother + "|" + couple_practicing_family_planning + "|" + breastfeeding_6_months_child + "|" + person_with_disability + "|" + type_of_disability + "|" + cause_of_disability + "|" + baspo_id_no + "|" + senior_citizen_membership + "|" + osca_id_no + "|" + pensioner_senior + "|";
+            let house_hold_head_data = house_hold_no + "|" + house_hold_firstname + "|" + house_hold_middlename + "|" + house_hold_lastname + "|" + mothers_maiden_firstname + "|" + mothers_maiden_middlename + "|" + mothers_maiden_lastname + "|" + barangay + "|" + purok + "|" + date_of_birth + "|" + place_of_birth + "|" + sex + "|" + civil_status + "|" + citizenship + "|" + pensioner + "|" + occupation + "|" + type_of_employment + "|" + type_of_employeer + "|" + employment_id + "|" + gsis_sss_no + "|" + pagibig_no + "|" + philhealth_id_no + "|" + religion + "|" + health_condition + "|" + educational_attainments + "|" + a4ps + "|" + a4_ps_id_no + "|" + practicing_pre_natal_check_up + "|" + pregnant_mother + "|" + couple_practicing_family_planning + "|" + breastfeeding_6_months_child + "|" + person_with_disability + "|" + type_of_disability + "|" + cause_of_disability + "|" + baspo_id_no + "|" + senior_citizen_membership + "|" + osca_id_no + "|" + pensioner_senior;
             localStorage.setItem("house_hold_head_data", house_hold_head_data);
         });
 
@@ -953,13 +896,18 @@ $('div.setup-panel div a.btn-success').trigger('click');
                 if(ls == null){
                     localStorage.setItem("members_of_the_family_name", name_1 + "|");
                 }else{
-                    localStorage.setItem("members_of_the_family_name", ls + name_1 + "|");
+                    if(length == ii){
+                        localStorage.setItem("members_of_the_family_name", ls + name_1);
+                    }else{
+                        localStorage.setItem("members_of_the_family_name", ls + name_1 + "|");
+                    }
                 }
             }
             localStorage.setItem("members_of_the_family_number", length);
         });
 
         $('.home_management_next').click(function () {
+            let token = $(`_token`).val();
             let toilet_type = $(`#toilet_type`).val();
             let water_source = $(`#water_source`).val();
             let food_production_activities = $(`#food_production_activities`).val();
@@ -970,36 +918,41 @@ $('div.setup-panel div a.btn-success').trigger('click');
             let with_blind_drainage = $(`#with_blind_drainage`).val();
             let segrated_waste = $(`#segrated_waste`).val();
 
-            let lshome_management_data = toilet_type + "|" + water_source + "|" + food_production_activities + "|" + using_idiodized_salt + "|" + with_functional_mrf + "|" + living_arrangements + "|" + fenced_household + "|" + with_blind_drainage + "|" + segrated_waste + "|";
+            let lshome_management_data = toilet_type + "|" + water_source + "|" + food_production_activities + "|" + using_idiodized_salt + "|" + with_functional_mrf + "|" + living_arrangements + "|" + fenced_household + "|" + with_blind_drainage + "|" + segrated_waste;
 
             let lshouse_hold_head_data = localStorage.getItem('house_hold_head_data');
             let lsmembers_of_the_family_name = localStorage.getItem('members_of_the_family_name');
             let lsmembers_of_the_family_number = localStorage.getItem('members_of_the_family_number');
+            localStorage.setItem("home_management_data", lshome_management_data);
 
+            localStorage.removeItem('members_of_the_family_data_all');
+            for(let i= 1; i <= lsmembers_of_the_family_number; i++){
+                let lsmembers_of_the_family_data = localStorage.getItem('members_of_the_family_data' + i);
+                let ls1 = localStorage.getItem('members_of_the_family_data_all');
+                if(ls1 == null){
+                    localStorage.setItem("members_of_the_family_data_all", lsmembers_of_the_family_data + "~~");
+                }else{
+                    if(lsmembers_of_the_family_number == i){
+                        localStorage.setItem("members_of_the_family_data_all", ls1 + lsmembers_of_the_family_data);
+                    }else{
+                        localStorage.setItem("members_of_the_family_data_all", ls1 + lsmembers_of_the_family_data + "~~");
+                    }
+                }
+            }
             $.ajax({
                 url: `/admin/create-save-cbms`,
                 method: 'POST',
                 data: {
-                    lshouse_hold_head_data,
-                    lsmembers_of_the_family_name,
-                    lshome_management_data,
+                    "_token": "{{ csrf_token() }}",
+                    lshouse_hold_head_data:lshouse_hold_head_data,
+                    lshome_management_data:lshome_management_data,
+                    lsmembers_of_the_family_number:lsmembers_of_the_family_number,
+                    lsmembers_of_the_family_name:lsmembers_of_the_family_name,
+                    lsmembers_of_the_family_data:localStorage.getItem('members_of_the_family_data_all'),
                 },
                 success: function (response) {
-                    console.log(response);
                 }
             });
-            for(let i= 1; i <= lsmembers_of_the_family_number; i++){
-                let lsmembers_of_the_family_data = localStorage.getItem('members_of_the_family_data' + i);
-                //$.ajax({
-                //    url: `/admin/create-save-cbms`,
-                //    method: 'POST',
-                //    data: {
-                //        lsmembers_of_the_family_data,
-                //    },
-                //    success: function (response) {
-                //    }
-                //});
-            }
         });
     });
 

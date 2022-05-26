@@ -64,7 +64,7 @@ class CreateSocialInformationTable extends Migration
             $table->string('pensionersc', 10)->nullable();
             $table->string('toilet_type', 20)->nullable();
             $table->string('water_source', 20)->nullable();
-            $table->string('food_production_activities', 20)->nullable();
+            $table->string('food_production_activities', 30)->nullable();
             $table->string('using_idiodized_salt', 10)->nullable();
             $table->string('with_functional_mrf', 10)->nullable();
             $table->string('livinga_rrangements', 10)->nullable();
